@@ -8,17 +8,11 @@ var userSaid = [];
 var losses = 0;
 var Wcounts = 0;
 
-
-// function generator(letters) {
-//     return letters[Math.floor(Math.random()* letters.length)];
-// }
-
 document.onkeyup = function (event) {
     
 var userUser = String.fromCharCode(event.keyCode).toLowerCase();
 var compGuess = letters[Math.floor(Math.random() * letters.length)];
     userSaid.push(userUser);
-
 
     if (userUser == compGuess) {
         console.log("correct", userSaid)
@@ -36,14 +30,9 @@ var compGuess = letters[Math.floor(Math.random() * letters.length)];
         userSaid.length = 0;
         // document.getElementById("userSaid").innerHTML = (userSaid);
         // (losses+=1);
-
-
-
     }
-
     else if (userUser !== compGuess) {
-        chancesLeft--;
-        
+        chancesLeft--;  
     }
     var html = "<h1>Psychic Game</h1>" + "<p>What letter is on my mind?</p>" + "<p>Wins: " + Wcounts + "</p>" +
     "<p>Losses: " + 
@@ -63,12 +52,7 @@ var compGuess = letters[Math.floor(Math.random() * letters.length)];
 
 
 
-// var reset = {
-//     resetGame: function() {
-//         if(chancesLeft== 0) {
-//             document.onkeydown = false;
-//             chancesLeft=15;
-//             userSaid=[];
+
 
 
 
